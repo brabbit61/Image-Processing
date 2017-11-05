@@ -115,10 +115,10 @@ class NaiveBayes2{
 				subdata[i][j]=data[i][j];
 		}
 		trainNB(subdata,sublabels);
-		for(i=0;i<10;i++){
+		/*for(i=0;i<10;i++){
 			for(j=0;j<784;j++)
 				System.out.print(pvect[i][j]);
-		}
+		}*/
 		for(i=31500;i<41900;i++){
 			x=classify(data[i],probability);
 			if(x!=labels[i])
