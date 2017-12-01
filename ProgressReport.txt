@@ -1,0 +1,5 @@
+31th Oct 2017:	Completed Week 1 of Andrew Ng
+1st Nov 2017: Nothing
+2nd Nov 2017: Completed Week 2 of Andrew Ng
+3rd Nov 2017: Completed the assignments for week2 
+1st Dec 2017: Setted OpenCV and ROS up
