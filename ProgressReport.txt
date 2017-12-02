@@ -3,3 +3,4 @@
 2nd Nov 2017: Completed Week 2 of Andrew Ng
 3rd Nov 2017: Completed the assignments for week2 
 1st Dec 2017: Setted OpenCV and ROS up
+2nd Dec 2017: Completed the theory for OpenCV till core operations
