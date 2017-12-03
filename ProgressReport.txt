@@ -4,3 +4,4 @@
 3rd Nov 2017: Completed the assignments for week2 
 1st Dec 2017: Setted OpenCV and ROS up
 2nd Dec 2017: Completed the theory for OpenCV till core operations
+3rd Dec 2017: Half way done with Imgproc module
