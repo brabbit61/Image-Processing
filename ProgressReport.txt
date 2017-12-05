@@ -6,3 +6,4 @@
 2nd Dec 2017: Completed the theory for OpenCV till core operations
 3rd Dec 2017: Half way done with Imgproc module
 4th Dec 2017: Only Contours left from the Imgproc module
+5th Dec 2017: Completerd Imgproc module
