@@ -8,3 +8,4 @@
 4th Dec 2017: Only Contours left from the Imgproc module
 5th Dec 2017: Completed Imgproc module
 6th Dec 2017: Nothing
+7-8th Dec 2017: Completed till writing a simple publisher and a subscriber in python
