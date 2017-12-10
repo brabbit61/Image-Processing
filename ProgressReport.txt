@@ -9,3 +9,4 @@
 5th Dec 2017: Completed Imgproc module
 6th Dec 2017: Nothing
 7-8th Dec 2017: Completed till writing a simple publisher and a subscriber in python
+9th Dec 2017: Completed ROS beginner and started working on the OpenCV task
