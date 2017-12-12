@@ -10,3 +10,5 @@
 6th Dec 2017: Nothing
 7-8th Dec 2017: Completed till writing a simple publisher and a subscriber in python
 9th Dec 2017: Completed ROS beginner and started working on the OpenCV task
+10-12th Dec 2017: Completed the OpenCV task and started to integrate it with the publisher and the subscriber
+
