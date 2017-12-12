@@ -46,7 +46,8 @@ while vid.isOpened():
 				continue
 			cv2.line(img,(x,y+h),(x+w,y),(0,0,255),9)
 			m=-h/float(w)									#slope of the yellow line		
-			c=y+h-m*(x)										#intercept of the yellow line
+			c=y+h-m*(x)										#intercept of the yellow line	
+			print "Slope of the yellow line= "+str(m)+" and the intercept= "+str(c)
 			#if (cv2.contourArea(cnt)/(rect[1][0]*rect[1][1]))>0.5:	#finding the extent of the contour to check whether its a line or not
 			#	cv2.drawContours(img,[cnt],0,(0,0,255),-1)
 				
@@ -56,34 +57,36 @@ while vid.isOpened():
 	frame=cv2.dilate(frame,None,iterations=3)
 	frame=cv2.erode(frame,None,iterations=1)
 	lines = cv2.HoughLinesP(frame, 1, np.pi/180,175,minLineLength=60,maxLineGap=200)														
-	m=0
+	mw=0
 	if lines is not None:
 		slopepos=[]
 		intercepts=[]
 		for x in lines:
 			for y in x:
-				m=(y[3]-y[1])/float(y[2]-y[0])
-				if m>0.45:
-					c=y[1]-m*y[0]
-					intercepts.append(c)
-					slopepos.append(m)
+				mw=(y[3]-y[1])/float(y[2]-y[0])
+				if mw>0.45:
+					cw=y[1]-m*y[0]
+					intercepts.append(cw)
+					slopepos.append(mw)
 					dist=abs(cordpos[0]-y[0])+abs(cordpos[1]-y[1])
 					if dist<30:
 						continue
 					cordpos=[y[0],y[1]]
 		
 		if len(slopepos)>0:
-			c=sum(intercepts)/len(intercepts)				# y intercept
-			m=sum(slopepos)/len(slopepos)					#Slope for the white lines		
-			m=np.arctan(m)
-			if m>0.45:											#to exclude lines that have very low degree of inclination eg 1,2 degrees			
-				x2= int(cordpos[0]+285*np.cos(m))
-				y2= int(cordpos[1]+285*np.sin(m))
+			cw=sum(intercepts)/len(intercepts)				# y intercept
+			mw=sum(slopepos)/len(slopepos)					#Slope for the white lines		
+			mw=np.arctan(mw)
+			if mw>0.45:											#to exclude lines that have very low degree of inclination eg 1,2 degrees			
+				x2= int(cordpos[0]+285*np.cos(mw))
+				y2= int(cordpos[1]+285*np.sin(mw))
 				cv2.line(img,(cordpos[0],cordpos[1]),(x2,y2),(0,0,255),9)
+				print "Slope of the white line= "+str(mw)+" and the intercept= "+str(cw)
 				#cv2.line(img,(cordpos[0],cordpos[1]),(0,int(c)),(0,0,255),9)	
 	else:
 		#if framenum!=1:
 		cv2.line(img,(cordpos[0],cordpos[1]),(x2,y2),(0,0,255),9)
+		print "Slope of the white line= "+str(mw)+" and the intercept= "+str(cw)
 		#cv2.line(img,(cordpos[0],cordpos[1]),(0,int(c)),(0,0,255),9)
 	cv2.imshow('frame',img)
 	if cv2.waitKey(1)==27:
