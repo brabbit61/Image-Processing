@@ -12,3 +12,4 @@
 9th Dec 2017: Completed ROS beginner and started working on the OpenCV task
 10-12th Dec 2017: Almost completed the OpenCV task 
 13th Dec 2017: Completed the OpenCV task
+14th-15th Dec 2017: Completed theory till week6 AndrewNg course. Exercises left for week4 onwards
