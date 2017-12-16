@@ -11,7 +11,7 @@ def normalize(x):
 size=[]
 rooms=[]
 price=[]
-with open("/home/jenit1/Desktop/ex1/ex1/ex1data2.txt") as fr:
+with open("/home/jenit1/Desktop/Manas/AndrewNg/Assignments/Week2/ex1/ex1/ex1data2.txt") as fr:
 	for x in fr.readlines():
 		x=x.strip().split(',')
 		size.append(int(x[0]))

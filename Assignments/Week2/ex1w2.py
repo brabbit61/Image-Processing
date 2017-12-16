@@ -8,8 +8,9 @@ def normalize(x):
 	for i in range(len(x)):
 		x[i]=(x[i]-mi)/(ma-mi)
 	return x
-profit=population=[]
-with open("/home/jenit1/Desktop/ex1/ex1/ex1data1.txt") as fr:
+profit=[]
+population=[]
+with open("/home/jenit1/Desktop/Manas/AndrewNg/Assignments/Week2/ex1/ex1/ex1data1.txt") as fr:
 	for x in fr.readlines():
 		x=x.strip().split(',')
 		population.append(float(x[0]))	
@@ -23,8 +24,9 @@ theta=np.zeros([2,1],dtype='f')			#2*1
 x=np.ones([m,1])
 x=np.hstack((x,population)) #194*2
 alpha=0.01
-temp1=temp0=0
-for j in range(10000):
+for j in range(400):
+	temp1=0
+	temp0=0
 	for i in range(m):
 		temp1+= ((theta.transpose()*(x[i].transpose()))-profit[i])*float(population[i])
 		temp0+=(theta.transpose()*(x[i].transpose()))-profit[i]
