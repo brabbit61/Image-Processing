@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-t=0
+
 framenum=0 
 cordpos=[0,0]
 cv2.namedWindow('frame',cv2.WINDOW_NORMAL)
