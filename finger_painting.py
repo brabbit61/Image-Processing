@@ -19,7 +19,7 @@ while vid.isOpened():
 	frame=cv2.dilate(frame,None,iterations=2)
 	frame=cv2.erode(frame,None,iterations=2)	
 	frame=cv2.medianBlur(frame,1)
-	_,contours,heirachy=cv2.findContours(frame,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+	_,contours,heirachy=cv2.findContours(frame,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
 	if contours is not None:
 		for circle in contours:
 			M=cv2.moments(circle)	
