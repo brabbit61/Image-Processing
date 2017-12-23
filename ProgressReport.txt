@@ -17,7 +17,5 @@
 <<<<<<< HEAD
 17th Dec 2017: Started TensorFlow
 18th-21 Dec 2017: Completed ROS beginner again(had a lot of doubts the first time so went over it again) and ROS intermediate (except using a C++ class in Python)
-
-=======
->>>>>>> origin/master
+22nd Dec 2017: Completed tf2 tutorials (completed but not a strong grasp on everything)
 
