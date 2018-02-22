@@ -15,8 +15,6 @@ def callback(data):
 	w,h,_=ogimg.shape											#dimensions of the img
 	finaly=np.zeros((w,h,3),np.uint8)						#black background for yellow color detection
 	finalw=np.zeros((w,h,3),np.uint8)						#black background for white color detection
-	yellow_lower=(20,130,150)								#threshold values
-	yellow_upper=(30,240,255)
 	white_lower=(206,195,181)
 	white_upper=(255,255,255)
 	trapezium=np.array([[150,680],[1150,680],[900,440],[270,440]])
